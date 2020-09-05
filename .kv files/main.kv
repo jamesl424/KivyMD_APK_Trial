@@ -1,0 +1,60 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    MDToolbar:
+        id: Toolbar
+        title: 'Gardening Toolset'
+        font_name: 'Fonts/Montserrat-Medium'
+        md_bg_color: self.theme_cls.primary_dark
+        specific_text_color: 1, 1, 1, 1
+        right_action_items: [['settings', lambda x: print('Settings')]]
+
+
+#TODO Create SettingsScreen and allow calling
+
+    MDBottomNavigation:
+        panel_color: self.theme_cls.primary_dark
+
+        MDBottomNavigationItem:
+            name: 'HomeScreen'
+            text: 'Home'
+            icon: 'home'
+
+            HomeScreen
+
+        MDBottomNavigationItem:
+            name: 'PlantsScreen'
+            text: 'Plants'
+            icon: 'carrot'
+
+            PlantsScreen
+
+        MDBottomNavigationItem:
+            name: 'TasksScreen'
+            text: 'Tasks'
+            icon: 'note-multiple'
+
+            TasksScreen
+
+        MDBottomNavigationItem:
+            name: 'WikiScreen'
+            text: 'Wiki'
+            icon: 'web'
+
+            WikiScreen
+
+<HomeScreen>:
+    MDLabel:
+        text: 'Home'
+
+<PlantsScreen>:
+    MDLabel:
+        text: 'Plants'
+
+<TasksScreen>:
+    MDLabel:
+        text: 'Tasks'
+
+<WikiScreen>:
+    MDLabel:
+        text: 'Wiki'
